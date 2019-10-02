@@ -1,5 +1,17 @@
-function executa () { 
-    var a = 10
-    var b = 2 * a
-    document.getElementById("resultado").innerHTML = b;
+function soma () { 
+
 }
+function divisao () { 
+
+}
+function subtracao () { 
+
+}
+function multiplicacao () { 
+
+}
+function resultado () { 
+
+}
+
+
