@@ -10,7 +10,7 @@ function digitaOperando (numero){
         visor.innerHTML = operando1;
     }else {
         operando2 = numero;
-        visor.innerHTMl = operando1 + ' ' + operador + ' ' +operando2;
+        visor.innerHTMl = operando2;
     }
    
 }
