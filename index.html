@@ -16,29 +16,29 @@
             <input class="tela" type="text">
         </div>
         <div class="funcao">
-            <button @onclick="soma">+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>/</button>
+            <button onclick="digitaOperador('+')">+</button>
+            <button onclick="digitaOperador('-')">-</button>
+            <button onclick="digitaOperador('*')">x</button>
+            <button onclick="digitaOperador('/')">/</button>
         </div>
         <div class="teclas">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+            <button onclick="digitaOperando(1)">1</button>
+            <button onclick="digitaOperando(2)">2</button>
+            <button onclick="digitaOperando(3)">3</button>
             <div>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
+                <button onclick="digitaOperando(4)">4</button>
+                <button onclick="digitaOperando(5)">5</button>
+                <button onclick="digitaOperando(6)">6</button>
             </div>
             <div>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+                <button onclick="digitaOperando(7)">7</button>
+                <button onclick="digitaOperando(8)">8</button>
+                <button onclick="digitaOperando(9)">9</button>
             </div>
             <div>
                 <button>c</button>
-                <button>0</button>
-                <button>=</button>
+                <button onclick="digitaOperando(0)" >0</button>
+                <button onclick="executa()">=</button>
             </div>
         </div>
     </div>
