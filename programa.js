@@ -3,7 +3,7 @@ var operando2;
 var operador;
 
 function digitaOperando (numero){
-    let visor = document.getElementById("visor");
+    let visor = getVisor()
 
     if(operador == ''){
         operando1 = operando1 + numero;
@@ -16,14 +16,14 @@ function digitaOperando (numero){
 }
 
 function digitaOperador(simbolo){
-    let visor = document.getElementById("visor");
+    let visor = getVisor()
     operador = simbolo;
     visor.innerHTML = operando1 + ' ' + operador;
 }
 
 function executa(){
     let resultado =0;
-    let visor = document.getElementById("visor");
+    let visor = getVisor()
     let op1 = parseInt(operando1);
     let op2 = parseInt(operando2);
     switch(operador){
@@ -36,9 +36,17 @@ function executa(){
     visor.innerHTML = operando1 + ' ' + operador + ' ' + operando2 + ' = ' + resultado;
 }
 function limpa(){
-    let visor = document.getElementById("visor");
+    let visor = getVisor()
     operando1 = '';
     operando2 = '';
     operador ='';
     visor.innerhtml ='';
+}
+
+function getVisor(callback) {
+    let visor = document.getElementById("visor");
+
+    callback();
+
+    return visor;
 }
