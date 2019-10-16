@@ -3,7 +3,11 @@ var operando2;
 var operador;
 
 function digitaOperando (numero){
-    let visor = getVisor()
+    let visor = getVisor(
+        function apagaVisor(){
+            console.log("apagando visor")
+        }
+    );
 
     if(operador == ''){
         operando1 = operando1 + numero;
