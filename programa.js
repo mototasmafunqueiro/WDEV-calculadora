@@ -1,15 +1,15 @@
-var operando1 = -1;
-var operando2 = -1;
-var operador = '';
+var operando1;
+var operando2;
+var operador;
 
 function digitaOperando (numero){
     let visor = document.getElementById("visor");
 
     if(operador == ''){
-        operando1 = numero;
+        operando1 = operando1 + numero;
         visor.innerHTML = operando1;
     }else {
-        operando2 = numero;
+        operando2 = operando2 + numero;
         visor.innerHTMl = operando2;
     }
    
@@ -24,6 +24,8 @@ function digitaOperador(simbolo){
 function executa(){
     let resultado =0;
     let visor = document.getElementById("visor");
+    let op1 = parseInt(operando1);
+    let op2 = parseInt(operando2);
     switch(operador){
         case '+': resultado = operando1 + operando2; break;
         case '-': resultado = operando1 - operando2; break;
@@ -35,8 +37,8 @@ function executa(){
 }
 function limpa(){
     let visor = document.getElementById("visor");
-    operando1 = -1;
-    operando2 = -1;
+    operando1 = '';
+    operando2 = '';
     operador ='';
     visor.innerhtml ='';
 }
